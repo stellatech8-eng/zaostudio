@@ -12,7 +12,7 @@
     /* Zao Studio brand layer: an ink masthead lets the supplied dark wordmark stay true to its original artwork. */
     :root{--ink:#171824;--panel:#202334;--line:#3a3e55;--cream:#f1f3ff;--muted:#b7bad2;--gold:#aa91ff;--purple:#773fff;--cyan:#48bcff}
     a:focus-visible,summary:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
-    .top{background:#f8f9ff;border-bottom:0;box-shadow:0 5px 24px #11132924}
+    .top{background:linear-gradient(105deg,#f5f1ff 0%,#edf2ff 52%,#eafaff 100%);border-bottom:0;box-shadow:0 5px 24px #11132924}
     .top:after{content:"";display:block;height:3px;background:linear-gradient(90deg,#793dff 0%,#4d77ff 55%,#47bdff 100%)}
     .top .wrap{height:80px}
     .brand{width:238px;height:72px;display:block;overflow:hidden;flex:none}
@@ -20,8 +20,8 @@
     .nav a{color:#242735;font-weight:650}
     .nav a:hover{color:#7140e8}
     .nav .nav-cta{background:linear-gradient(105deg,#743cff,#467dff);color:white;border-radius:9px;box-shadow:0 4px 14px #7444ff40}
-    .hero{background:radial-gradient(circle at 80% 42%,#4d4dba52,transparent 44%),linear-gradient(90deg,#171824 3%,#171824eb 44%,#23194785 76%,#17182450),#171824}
-    .hero.has-image{background-image:linear-gradient(90deg,#171824 0%,#171824ed 30%,#27214eb0 61%,#4c2d8780),url('hero.png')}
+    .hero{background:linear-gradient(90deg,#171824 3%,#171824eb 44%,#1718249c 76%,#17182450),#171824}
+    .hero.has-image{background-image:linear-gradient(90deg,#171824 0%,#171824ed 34%,#1718249c 68%,#17182420),url('hero.png')}
     .eyebrow,.small-label{color:#bcadff}
     .hero-note{color:#bfc4de}
     .btn{border-color:#ad97ff}
@@ -37,11 +37,19 @@
     .disclosure{background:#8274dd18}
     .close{background:linear-gradient(115deg,#30235c,#193452)}
     .close p{color:#d7dbef}
-    @media(max-width:760px){.top .wrap{height:66px}.brand,.brand img{width:178px;height:58px}.nav{gap:0}.nav .nav-cta{font-size:12px;padding:8px 10px}.hero.has-image{background-image:linear-gradient(90deg,#171824f5,#171824d9 52%,#3b2c7080),url('hero.png')}}
+    /* Shared dark glass navigation for every Zao Studio route. */
+    .top{background:linear-gradient(105deg,#05060acc,#11131bcc 58%,#060811c7);border-bottom:1px solid #ffffff1f;box-shadow:0 14px 38px #02030aad;backdrop-filter:blur(22px) saturate(155%)}
+    .top:after{height:1px;background:linear-gradient(90deg,transparent,#8f6dff 48%,#45bbff,transparent)}
+    .brand{background:none;border:0;border-radius:0;box-shadow:none}
+    .brand img{filter:none;opacity:1}
+    .nav a{color:#eef2ff}.nav a:hover,.nav a.active{color:#74c7ff}
+    .hero.has-image{background-size:100% 100%,auto 100%;background-position:center,right center;background-repeat:no-repeat}
+    @media(max-width:760px){.top .wrap{height:66px}.brand,.brand img{width:178px;height:58px}.nav{gap:10px}.nav a:not(.nav-cta){display:inline-flex}.nav .nav-cta{font-size:12px;padding:8px 10px}.hero.has-image{background-image:linear-gradient(90deg,#171824f5,#171824d9 58%,#17182455),url('hero.png');background-size:100% 100%,auto 78%;background-position:center,90% bottom}}
+    .assets-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.asset-card{background:#202235;border:1px solid #ffffff18;border-radius:14px;overflow:hidden;min-width:0}.asset-preview{height:150px;display:grid;place-items:center;position:relative;isolation:isolate;background:radial-gradient(circle at 82% 20%,#4c9dff80,transparent 42%),linear-gradient(145deg,#261c5a,#171826)}.asset-preview::after{content:"Z";font-size:90px;font-weight:900;line-height:1;background:linear-gradient(140deg,#8d52ff,#38c1ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 12px 12px #0008);transform:skewX(-8deg)}.asset-preview.vertical::before{content:"ZAO STUDIO";position:absolute;z-index:1;color:#fff;letter-spacing:.2em;font-size:9px;font-weight:800;writing-mode:vertical-rl;right:16px;opacity:.85}.asset-preview.floating::before{content:"ZAO STUDIO";position:absolute;z-index:1;color:#fff;letter-spacing:.14em;font-size:10px;font-weight:800;opacity:.28;transform:rotate(-20deg)}.asset-preview.horizontal::before{content:"ZAO STUDIO";position:absolute;z-index:1;left:14px;bottom:13px;color:#fff;letter-spacing:.12em;font-size:9px;font-weight:800}.asset-preview.cover::before{content:"ZAO ORIGINAL";position:absolute;z-index:1;left:12px;top:12px;color:#fff;background:#171824bf;border:1px solid #ffffff55;border-radius:4px;padding:4px 6px;letter-spacing:.08em;font-size:8px;font-weight:800}.asset-preview.corner::before{content:"ZAO";position:absolute;z-index:1;right:12px;top:12px;color:#fff;background:linear-gradient(135deg,#7943ff,#3aafff);border-radius:5px;padding:4px 6px;font-size:9px;font-weight:900;letter-spacing:.08em}.asset-info{padding:14px}.asset-info h3{font-size:15px;line-height:1.35;margin:0 0 5px}.asset-info p{margin:0;color:#aeb1c3;font-size:12px;line-height:1.45}.asset-note{margin-top:20px;padding:16px 18px;border-radius:10px;background:#7251ff12;border:1px solid #9d85ff3d;color:#bdb8d7;font-size:14px}.asset-note b{color:#d1c8ff}@media(max-width:920px){.assets-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:560px){.assets-grid{grid-template-columns:repeat(2,1fr)}.asset-preview{height:130px}}
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="#top" aria-label="Zao Studio 首页"><img src="zao-studio-logo.png" alt="Zao Studio"></a><nav class="nav" aria-label="主导航"><a href="#benefits">合作支持</a><a href="#tiers">分成方式</a><a href="#process">合作流程</a><a class="nav-cta" href="#apply">了解如何申请</a></nav></div></header>
+  <header id="site-nav"></header>
   <main id="top">
     <section class="hero"><div class="wrap"><div class="eyebrow">ZAO STUDIO · 创作者合作概念</div><h1>让好故事，<br>找到愿意追更的人。</h1><p class="lead">面向成人向短剧创作者，提供作品发行、分成与运营支持。</p><p class="sub">独家作品按单部评定，分成档位为 50%–70%；符合条件的新项目可申请试制支持。具体权益以正式协议为准。</p><div class="actions"><a class="btn btn-primary" href="#apply">了解合作流程 ↗</a><a class="btn btn-ghost" href="#tiers">查看分成标准</a></div><p class="hero-note">品牌设计概念稿；合作数字与条款参考黄豆短剧公开页面，非 Zao Studio 已确认承诺。</p></div></section>
     <section class="section" id="benefits"><div class="wrap"><div class="section-head"><div><span class="small-label">WHY PARTNER WITH US</span><h2>从上线到持续追更，<br>每一步都有支持。</h2></div><p class="section-intro">将原页面的大段宣介，整理为创作者最关心的四项合作价值。</p></div><div class="feature-grid"><article class="feature"><span class="num">01 / 发行</span><h3>面向明确的短剧受众</h3><p>通过平台内发行触达有成人向短剧观看需求的用户。实际流量数据应由平台核实后公布。</p></article><article class="feature"><span class="num">02 / 推荐</span><h3>按作品表现持续推荐</h3><p>过审作品可进入推荐池；表现优异的作品可获得首页、专区或榜单展示机会。</p></article><article class="feature"><span class="num">03 / 宣发</span><h3>站内外联合推广</h3><p>针对潜力作品，结合预告、精彩片段与官方渠道进行宣传；资源安排以实际合作方案为准。</p></article><article class="feature"><span class="num">04 / 孵化</span><h3>试制与运营支持</h3><p>入选创新项目可获每集 3,000 元、最多 5 集的试制补贴；部分作品可获封面与付费节点优化建议。</p></article></div></div></section>
@@ -52,6 +60,6 @@
     <section class="close" id="apply"><div class="wrap"><span class="small-label">READY TO COLLABORATE?</span><h2>下一部值得追的短剧，<br>可以从这里开始。</h2><p>正式站点应在这里提供经过核实的申请表或商务联系渠道。概念稿不收集作品、个人资料或联系方式。</p><a class="btn btn-primary" href="#process">先查看准备清单 ↗</a></div></section>
   </main>
   <footer class="foot"><div class="wrap"><span>Zao Studio 创作者合作 · 品牌概念稿</span><span>示例数据与条款需运营方核实</span></div></footer>
-  <script>const h=new Image();h.onload=()=>document.querySelector('.hero').classList.add('has-image');h.src='hero.png';</script>
+  <script src="nav.js?v=3"></script><script>const h=new Image();h.onload=()=>document.querySelector('.hero').classList.add('has-image');h.src='hero.png';</script>
 </body>
 </html>
